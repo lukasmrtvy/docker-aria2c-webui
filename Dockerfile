@@ -1,5 +1,5 @@
 
-FROM alpine:edge
+FROM alpine:latest
 
 RUN     apk update && \
         apk --no-cache upgrade && \
