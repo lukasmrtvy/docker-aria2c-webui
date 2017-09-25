@@ -23,9 +23,6 @@ RUN apk add --no-cache darkhttpd git && \
 EXPOSE 6800
 EXPOSE 80
 
-#ENTRYPOINT aria2c
-#CMD ${VARIABLES}
-
 USER ${USER}
 
 VOLUME /opt/downloads
