@@ -3,9 +3,9 @@ FROM alpine:latest
 ENV ARIA2WEBUI_VERSION 1.0
 
 ENV UID 1000
+ENV GID 1000
 ENV USER htpc
 ENV GROUP htpc
-
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP}  && \
     apk add --no-cache darkhttpd git && \
