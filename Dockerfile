@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV ARIA2WEBUI_VERSION 1.0
+ENV ARIA2WEBUI_VERSION 77636e25af04a965435519903ae09819ab727586
 
 ENV UID 1000
 ENV GID 1000
@@ -8,9 +8,10 @@ ENV USER htpc
 ENV GROUP htpc
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP}  && \
-    apk add --no-cache darkhttpd git && \
-    git clone https://github.com/ziahamza/webui-aria2 /opt/aria2-webui && \
-    apk del git
+    apk add --no-cache darkhttpd tar && \
+    /opt/aria2c-webui  && \
+    curl -sSL https://github.com/webui-aria2/archive/archive/${ARIA2WEBUI_VERSION}.tar.gz | tar xz -C /opt/aria2c-webui --strip-components=1 && \
+    apk del tar
 
 EXPOSE 8080
 
