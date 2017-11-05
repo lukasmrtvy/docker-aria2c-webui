@@ -8,7 +8,7 @@ ENV USER htpc
 ENV GROUP htpc
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP}  && \
-    apk add --no-cache darkhttpd git && \
+    apk add --no-cache darkhttpd git tzdata && \
     git clone https://github.com/ziahamza/webui-aria2 /opt/aria2-webui && \
     apk del git
 
