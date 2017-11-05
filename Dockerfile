@@ -16,7 +16,7 @@ EXPOSE 8080
 
 USER ${USER}
 
-VOLUME /opt/aria2-webui
+VOLUME /opt/aria2-webui/js/services/settings/
 
 LABEL version=${ARIA2WEBUI_VERSION}
 LABEL url=https://api.github.com/repos/ziahamza/webui-aria2/commits/master
