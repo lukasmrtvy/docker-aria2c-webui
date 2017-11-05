@@ -9,7 +9,7 @@ ENV GROUP htpc
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP}  && \
     apk add --no-cache darkhttpd tar && \
-    /opt/aria2c-webui  && \
+    mkdir -p /opt/aria2c-webui  && \
     curl -sSL https://github.com/webui-aria2/archive/archive/${ARIA2WEBUI_VERSION}.tar.gz | tar xz -C /opt/aria2c-webui --strip-components=1 && \
     chown -R ${USER}:${GROUP} /opt/aria2c-webui  && \
     apk del tar
