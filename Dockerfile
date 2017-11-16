@@ -21,4 +21,4 @@ USER ${USER}
 LABEL version=${ARIA2WEBUI_VERSION}
 LABEL url=https://api.github.com/repos/ziahamza/webui-aria2/commits/master
 
-CMD darkhttpd /opt/aria2-webui --port 8080 
+CMD darkhttpd /opt/aria2c-webui --port 8080 
