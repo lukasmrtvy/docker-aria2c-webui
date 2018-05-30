@@ -19,6 +19,6 @@ EXPOSE 8080
 USER ${USER}
 
 LABEL version=${ARIA2WEBUI_VERSION}
-LABEL url=https://api.github.com/repos/ziahamza/webui-aria2/
+LABEL url=https://github.com/ziahamza/webui-aria2/
 
 CMD darkhttpd /opt/aria2c-webui --port 8080 
